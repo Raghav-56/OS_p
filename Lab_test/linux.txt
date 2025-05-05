@@ -1,0 +1,202 @@
+raghav@MSI-Raghav:/mnt/c/Users/ragha/OneDrive/U.I.E.T/Sem 4/PCIT-453_Operating System_(P)$ cd Lab_test/
+
+
+
+
+
+raghav@MSI-Raghav:/mnt/c/Users/ragha/OneDrive/U.I.E.T/Sem 4/PCIT-453_Operating System_(P)/Lab_test$ chmod --help
+Usage: chmod [OPTION]... MODE[,MODE]... FILE...
+  or:  chmod [OPTION]... OCTAL-MODE FILE...
+  or:  chmod [OPTION]... --reference=RFILE FILE...
+Change the mode of each FILE to MODE.
+With --reference, change the mode of each FILE to that of RFILE.
+
+  -c, --changes          like verbose but report only when a change is made
+  -f, --silent, --quiet  suppress most error messages
+  -v, --verbose          output a diagnostic for every file processed
+      --no-preserve-root  do not treat '/' specially (the default)
+      --preserve-root    fail to operate recursively on '/'
+      --reference=RFILE  use RFILE's mode instead of specifying MODE values.
+                         RFILE is always dereferenced if a symbolic link.
+  -R, --recursive        change files and directories recursively
+      --help        display this help and exit
+      --version     output version information and exit
+
+Each MODE is of the form '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/chmod>
+or available locally via: info '(coreutils) chmod invocation'
+
+
+
+
+
+
+
+raghav@MSI-Raghav:/mnt/c/Users/ragha/OneDrive/U.I.E.T/Sem 4/PCIT-453_Operating System_(P)/Lab_test$ chown --help
+Usage: chown [OPTION]... [OWNER][:[GROUP]] FILE...
+  or:  chown [OPTION]... --reference=RFILE FILE...
+Change the owner and/or group of each FILE to OWNER and/or GROUP.
+With --reference, change the owner and group of each FILE to those of RFILE.
+
+  -c, --changes          like verbose but report only when a change is made
+  -f, --silent, --quiet  suppress most error messages
+  -v, --verbose          output a diagnostic for every file processed
+      --dereference      affect the referent of each symbolic link (this is
+                         the default), rather than the symbolic link itself
+  -h, --no-dereference   affect symbolic links instead of any referenced file
+                         (useful only on systems that can change the
+                         ownership of a symlink)
+      --from=CURRENT_OWNER:CURRENT_GROUP
+                         change the owner and/or group of each file only if
+                         its current owner and/or group match those specified
+                         here.  Either may be omitted, in which case a match
+                         is not required for the omitted attribute
+      --no-preserve-root  do not treat '/' specially (the default)
+      --preserve-root    fail to operate recursively on '/'
+      --reference=RFILE  use RFILE's owner and group rather than specifying
+                         OWNER:GROUP values.  RFILE is always dereferenced.
+  -R, --recursive        operate on files and directories recursively
+
+The following options modify how a hierarchy is traversed when the -R
+option is also specified.  If more than one is specified, only the final
+one takes effect.
+
+  -H                     if a command line argument is a symbolic link
+                         to a directory, traverse it
+  -L                     traverse every symbolic link to a directory
+                         encountered
+  -P                     do not traverse any symbolic links (default)
+
+      --help        display this help and exit
+      --version     output version information and exit
+
+Owner is unchanged if missing.  Group is unchanged if missing, but changed
+to login group if implied by a ':' following a symbolic OWNER.
+OWNER and GROUP may be numeric as well as symbolic.
+
+Examples:
+  chown root /u        Change the owner of /u to "root".
+  chown root:staff /u  Likewise, but also change its group to "staff".
+  chown -hR root /u    Change the owner of /u and subfiles to "root".
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/chown>
+or available locally via: info '(coreutils) chown invocation'
+
+
+
+
+raghav@MSI-Raghav:/mnt/c/Users/ragha/OneDrive/U.I.E.T/Sem 4/PCIT-453_Operating System_(P)/Lab_test$ chgrp --help
+Usage: chgrp [OPTION]... GROUP FILE...
+  or:  chgrp [OPTION]... --reference=RFILE FILE...
+Change the group of each FILE to GROUP.
+With --reference, change the group of each FILE to that of RFILE.
+
+  -c, --changes          like verbose but report only when a change is made
+  -f, --silent, --quiet  suppress most error messages
+  -v, --verbose          output a diagnostic for every file processed
+      --dereference      affect the referent of each symbolic link (this is
+                         the default), rather than the symbolic link itself
+  -h, --no-dereference   affect symbolic links instead of any referenced file
+                         (useful only on systems that can change the
+                         ownership of a symlink)
+      --no-preserve-root  do not treat '/' specially (the default)
+      --preserve-root    fail to operate recursively on '/'
+      --reference=RFILE  use RFILE's group rather than specifying a GROUP.
+                         RFILE is always dereferenced if a symbolic link.
+  -R, --recursive        operate on files and directories recursively
+
+The following options modify how a hierarchy is traversed when the -R
+option is also specified.  If more than one is specified, only the final
+one takes effect.
+
+  -H                     if a command line argument is a symbolic link
+                         to a directory, traverse it
+  -L                     traverse every symbolic link to a directory
+                         encountered
+  -P                     do not traverse any symbolic links (default)
+
+      --help        display this help and exit
+      --version     output version information and exit
+
+Examples:
+  chgrp staff /u      Change the group of /u to "staff".
+  chgrp -hR staff /u  Change the group of /u and subfiles to "staff".
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/chgrp>
+or available locally via: info '(coreutils) chgrp invocation'
+
+
+
+
+raghav@MSI-Raghav:/mnt/c/Users/ragha/OneDrive/U.I.E.T/Sem 4/PCIT-453_Operating System_(P)/Lab_test$ ls -l
+total 24
+-rwxrwxrwx 1 raghav raghav 9161 May  1 08:23 linux.md
+-rwxrwxrwx 1 raghav raghav 6476 May  1 08:23 linux.txt
+-rwxrwxrwx 1 raghav raghav 1465 May  1 08:02 round_robin.cpp
+-rwxrwxrwx 1 raghav raghav    0 May  1 08:20 test.txt
+
+
+
+
+Does not work
+
+
+
+
+
+
+raghav@MSI-Raghav:/mnt/c/Users/ragha/OneDrive/U.I.E.T/Sem 4/PCIT-453_Operating System_(P)/Lab_test$ cd ~
+raghav@MSI-Raghav:~$ ls
+home_backup.tar.gz:Zone.Identifier  myenv  package_list.txt  requirements.txt  snap
+raghav@MSI-Raghav:~$ mkdir Test
+raghav@MSI-Raghav:~$ cd Test
+raghav@MSI-Raghav:~/Test$ ls -l
+total 0
+raghav@MSI-Raghav:~/Test$ touch test.txt
+
+
+raghav@MSI-Raghav:~/Test$ ls -l
+total 0
+-rw-r--r-- 1 raghav raghav 0 May  1 08:47 test.txt
+
+raghav@MSI-Raghav:~/Test$ chmod u-w test.txt
+raghav@MSI-Raghav:~/Test$ ls -l
+total 0
+-r--r--r-- 1 raghav raghav 0 May  1 08:47 test.txt
+
+raghav@MSI-Raghav:~/Test$ chmod u-r test.txt
+raghav@MSI-Raghav:~/Test$ ls -l
+total 0
+----r--r-- 1 raghav raghav 0 May  1 08:47 test.txt
+
+
+raghav@MSI-Raghav:~/Test$ chmod g-w test.txt
+raghav@MSI-Raghav:~/Test$ ls -l
+total 0
+-rw-r--r-- 1 raghav raghav 0 May  1 08:50 hello.sh
+----r--r-- 1 raghav raghav 0 May  1 08:47 test.txt
+raghav@MSI-Raghav:~/Test$ chmod g+w test.txt
+raghav@MSI-Raghav:~/Test$ ls -l
+total 0
+-rw-r--r-- 1 raghav raghav 0 May  1 08:50 hello.sh
+----rw-r-- 1 raghav raghav 0 May  1 08:47 test.txt
+
+
+raghav@MSI-Raghav:~/Test$ ./hello.sh
+-bash: ./hello.sh: Permission denied
+raghav@MSI-Raghav:~/Test$ chmod u+x hello.sh
+raghav@MSI-Raghav:~/Test$ ./hello.sh
+Hello world!
+
+
+raghav@MSI-Raghav:~/Test$ ls -l
+total 4
+-rwxr--r-- 1 raghav raghav 20 May  1 08:52 hello.sh
+---xrw-r-- 1 raghav raghav  0 May  1 08:47 test.txt

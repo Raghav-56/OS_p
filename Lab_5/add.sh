@@ -1,8 +1,9 @@
 #!/bin/bash
 
-read -p "enter 1st number (x):" x
-read -p "enter 2nd number (y) : " y
-z=$((x+y))
+read -p "Enter the 1st number: " x
+read -p "Enter the 2nd number: " y
 
-echo "the sum of $x and $y is : $z"
+z=$((x + y)) 
+
+echo "The sum of $x and $y is $z"
 
